@@ -29,23 +29,23 @@ function playRound(playerSelection, computerSelection) {
 }
 */
 function game(playerSelection) {
-
+    const computerSelection = computerPlay();
     switch (playerSelection + computerSelection) {
-        case"ROCKSCISSORS":
-            "PAPERROCK":
-            "SCISSORSPAPER":
-            win(playerSelection ,computerSelection);
-            break;
-        case"SCISSORSROCK":
-            "ROCKPAPER":
-            "PAPERSCISSORS":
-            lose(playerSelection ,computerSelection);
-            break;
-        case"ROCKROCK":
-            "SCISSORSSCISSORS":
-            "PAPERPAPER":
-            result_h2.innerHTML = `${playerSelection} equals ${computerSelection}. It's a Draw!`;
-            break;
+        case "ROCKSCISSORS":
+        case "PAPERROCK":
+        case  "SCISSORSPAPER":
+             win(playerSelection ,computerSelection);
+             break;
+        case "SCISSORSROCK":
+        case "ROCKPAPER":
+        case     "PAPERSCISSORS":
+             lose(playerSelection ,computerSelection);
+             break;
+        case "ROCKROCK":
+        case "SCISSORSSCISSORS":
+        case "PAPERPAPER":
+             result_h2.innerHTML = `${playerSelection} equals ${computerSelection}. It's a Draw!`;
+             break;
     }
 }
 
@@ -70,49 +70,17 @@ function lose(playerSelection, computerSelection) {
 
 function main() {
     rock_div.addEventListener('click',function() {
-        alert("rock")
+        game("ROCK");
     })
 
     paper_div.addEventListener('click',function() {
-        alert("paper")
+        game("PAPER");
     })
 
     scissors_div.addEventListener('click',function() {
-        alert("scissors")
+        game("SCISSORS");
     })
 }
-main();
+console.log(main());
 
 
-/*
-var playerSelection = prompt("Enter your choice").toLowerCase();
-var computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
-*/
-
-
-
-
-
-/*function game() {
-    const playerSelection = prompt("What is your choice");
-    const computerSelection = computerPlay();
-    switch (playerSelection + computerSelection) {
-        case "RockScissors":
-        case "PaperRock":
-        case "ScissorsPaper":
-            console.log("You win!!");
-            break;
-        case "ScissorsRock":
-        case "RockPaper":
-        case "PaperScissors":
-            console.log("You lose!!");
-            break;
-        case "ScissorsScissors":
-        case "RockRock":
-        case "PaperPaper":
-            console.log("It's a drawww");
-            break;
-    }
-}
-console.log(game());*/
