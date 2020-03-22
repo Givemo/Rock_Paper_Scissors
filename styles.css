@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --ff-primary: arial, sans-serif;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+    --clr-black: #000000;
+
+    --fs-h1: 3rem;
+    --fs-header: 1.25rem;
+    --fs-body: 1rem;
+    --fs-h2: 2rem;
+}
+
+@media (max-width: 500px) {
+    :root{
+        --fs-header: 1.2rem;
+        --fs-h2: 1.5rem;
+        --fs-body: 0.8rem;
+    }
+    .choice-img {
+        padding: 0.5rem;
+    }
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    background-color: var(--clr-dark);
+    color: aqua;
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+    font-size: var(--fs-header);
+    background-color: aqua;
+    color: var(--clr-black);
+}
+
+.score-board {
+    border: solid 3px aqua;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    margin: 15px auto;
+    border-radius: 5px;
+    position: relative;
+    font-size: 2rem;
+}
+
+#user-badge {
+    background-color: rgb(126, 4, 4);
+    left: -25px;
+    margin: 0;
+    position: absolute;
+    padding:0.2rem;
+    font-size: 1rem;
+}
+
+#comp-badge {
+    background-color: rgb(126, 4, 4);
+    right: -25px;
+    margin: 0;
+    position: absolute;
+    padding:0.2rem;
+    font-size: 1rem;
+}
+
+
+span {
+    font-size: 2rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: var(--fs-h2);
+}
+
+.choices {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.choices :hover{
+    cursor: pointer;
+    background-color: rgb(6, 224, 224);
+    box-shadow: 0.15em 0.15em 0.15em rgb(5, 5, 5);
+}
+
+.choice-img {
+    display: inline-block;
+    border: solid 3px var(--clr-light);
+    border-radius: 50%;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    background-color:aqua;
+    width: 70px;
+}
+
+
+p {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: var(--fs-body);
+}
+
+
+img{
+    width: 50px;
+    opacity: 1.2;
+    display: inline-block;
+}
